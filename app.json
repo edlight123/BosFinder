@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "BòsFinder",
-    "slug": "bosfinder",
+    "slug": "ik",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bosfinder.app"
+      "bundleIdentifier": "com.bosfinder.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +25,9 @@
         "backgroundColor": "#2563EB"
       },
       "package": "com.bosfinder.app",
-      "permissions": ["CALL_PHONE"],
+      "permissions": [
+        "CALL_PHONE"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
@@ -31,8 +36,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"
+        "projectId": "60b86d43-155c-4944-97c5-df15d75c868e"
       }
-    }
+    },
+    "owner": "edlight"
   }
 }

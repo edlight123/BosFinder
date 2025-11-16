@@ -36,17 +36,25 @@ import { getStorage } from 'firebase/storage';
 import { User, BosProfile, JobRequest, Lead, Review, UserRole } from '../types';
 
 // TODO: Replace with your Firebase project configuration
+// Follow the guide in FIREBASE_SETUP.md to get your actual config
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDummyKeyForTestingUIOnly-ReplaceWithReal",
+  authDomain: "bosfinder-demo.firebaseapp.com",
+  projectId: "bosfinder-demo",
+  storageBucket: "bosfinder-demo.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abc123def456"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+let app;
+try {
+  app = initializeApp(firebaseConfig);
+} catch (error) {
+  console.error('Firebase initialization error:', error);
+  // Using dummy config - app will show UI but features won't work
+  app = initializeApp(firebaseConfig);
+}
 
 // Initialize Firebase Auth
 const auth = getAuth(app);
